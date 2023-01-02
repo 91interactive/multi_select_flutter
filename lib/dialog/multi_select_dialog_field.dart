@@ -221,6 +221,7 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
   final bool separateSelectedItems;
   final Color? checkColor;
   final bool isDismissible;
+  final bool isDense;
   FormFieldState<List<V>>? state;
 
   _MultiSelectDialogFieldView({
@@ -252,6 +253,7 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
     this.searchHintStyle,
     this.selectedItemsTextStyle,
     this.separateSelectedItems = false,
+    this.isDense = false,
     this.checkColor,
     required this.isDismissible,
   });
