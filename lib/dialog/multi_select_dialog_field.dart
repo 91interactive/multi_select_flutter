@@ -184,6 +184,7 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
                 separateSelectedItems: separateSelectedItems,
                 checkColor: checkColor,
                 isDismissible: isDismissible,
+                isDense: isDense,
               );
               return _MultiSelectDialogFieldView<V>._withState(field, state);
             });
