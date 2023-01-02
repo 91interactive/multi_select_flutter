@@ -100,6 +100,9 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
   /// Whether the user can dismiss the widget by tapping outside
   final bool isDismissible;
 
+  /// Removes padding from the Select field
+  final bool isDense;
+
   final AutovalidateMode autovalidateMode;
   final FormFieldValidator<List<V>>? validator;
   final FormFieldSetter<List<V>>? onSaved;
@@ -134,6 +137,7 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
     this.searchHintStyle,
     this.selectedItemsTextStyle,
     this.separateSelectedItems = false,
+    this.isDense = false,
     this.checkColor,
     this.isDismissible = true,
     this.onSaved,
@@ -449,7 +453,7 @@ class __MultiSelectDialogFieldViewState<V>
                       ),
                     )
                 : widget.decoration,
-            padding: const EdgeInsets.all(10),
+            padding: widget.isDense ? const EdgeInsets.all(10) : const EdgeInsets.all(2),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
