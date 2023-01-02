@@ -137,9 +137,9 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
     this.searchHintStyle,
     this.selectedItemsTextStyle,
     this.separateSelectedItems = false,
-    this.isDense = false,
     this.checkColor,
     this.isDismissible = true,
+    this.isDense = false,
     this.onSaved,
     this.validator,
     this.initialValue = const [],
@@ -254,9 +254,9 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
     this.searchHintStyle,
     this.selectedItemsTextStyle,
     this.separateSelectedItems = false,
-    this.isDense = false,
     this.checkColor,
     required this.isDismissible,
+    this.isDense = false,
   });
 
   /// This constructor allows a FormFieldState to be passed in. Called by MultiSelectDialogField.
@@ -292,6 +292,7 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
         separateSelectedItems = field.separateSelectedItems,
         checkColor = field.checkColor,
         isDismissible = field.isDismissible,
+        isDense = field.isDense,
         state = state;
 
   @override
